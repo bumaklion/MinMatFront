@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/themes/redmond/jquery-ui.min.css">
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
@@ -53,10 +54,15 @@ password {{password}}
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="app.js"></script>
+
+<script src="util/directives/directives.module.js"></script>
+<script src="util/directives/auto-complete.directive.js"></script>
 
 <script src="sign_in/sign-in.module.js"></script>
 <script src="sign_in/sign-in.route.js"></script>
@@ -74,3 +80,8 @@ password {{password}}
 
 </body>
 </html>
+
+
+
+recIng_FIXED: {"amount":"1","measurement":{"uuid":"111111","creationDate":"2016-01-05 00:00:00","lastUpdate":"2016-01-05 00:00:00","name":"st"},"$$hashKey":"object:4","ingredient":{"uuid":"333","creationDate":"2016-01-06 00:00:00","lastUpdate":"2016-01-06 00:00:00","name":"spaghetti","recipeIngredients":[]}}
+recIng_FIXED: {"amount":"2","measurement":{"uuid":"111111","creationDate":"2016-01-05 00:00:00","lastUpdate":"2016-01-05 00:00:00","name":"st"},"$$hashKey":"object:9","ingredient":{"uuid":"333","creationDate":"2016-01-06 00:00:00","lastUpdate":"2016-01-06 00:00:00","name":"spaghetti","recipeIngredients":[]}}

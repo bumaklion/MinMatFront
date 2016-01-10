@@ -3,14 +3,53 @@
     <label for="title">Title:</label>
     <input type="text" id="title" ng-model="vm.recipe.title"/>
 
-    ingridienser:
+    <div id="ingredientWrapper">
+        <label>Ingridienser:</label>
+        <span ng-repeat="ing in vm.recipe.recipeIngredients">
+            <div class="unit">
+                <!--amount-->
+                <input ng-model="ing.amount"/>
 
-    instruktioner:
+                <!--measurement-->
+                <select ng-options="meas as meas.name for meas in vm.measurements track by meas.uuid"
+                        ng-model="ing.measurement"></select>
 
-    bild:
+                <!--ingredient-->
+                <input ng-model="ing.ingredient" auto-complete auto-list="vm.ingredients" placeholder="ingridiens" required>
 
-
+            </div>
+        </span>
+        <button type="button" ng-click="vm.newIngredient();">En till</button>
+    </div>
 
 
     <button type="submit">spara recept</button>
 </form>
+
+
+<!--
+närmaste TODO:
+adminställe där man kan registrera ingridienser.. eller vafan.. ska man behöva göra det?
+man vill ju bara att de kommer nya när man använder dem! så TODO är egentligen bara en listview med recipeingredient!.
+
+
+ingridienser: - postas separat!
+
+en loop med separat form, går att nestla i angular med ng-form!! yttre !valid så submittas inte inre!
+
+LÄS PÅ OM HUR MAN ANVÄNDER NG-FORM
+https://scotch.io/tutorials/building-dynamic-angular-forms-with-ngrepeat-and-ngform
+
+
+instruktioner:  - postas separat!
+
+bild: - ehm.. separat i guess!
+
+
+
+
+
+hur ska json se ut?
+
+
+-->
